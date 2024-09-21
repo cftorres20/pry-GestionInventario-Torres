@@ -16,5 +16,6 @@ namespace pry_GestionInventario_Torres
         {
             InitializeComponent();
         }
+               
     }
 }

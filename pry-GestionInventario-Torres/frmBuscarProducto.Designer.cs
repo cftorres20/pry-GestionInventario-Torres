@@ -46,6 +46,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.radioButton3);
             this.groupBox2.Controls.Add(this.radioButton2);
@@ -117,6 +118,7 @@
             // 
             this.dgvProductos.AllowUserToAddRows = false;
             this.dgvProductos.AllowUserToDeleteRows = false;
+            this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(12, 212);
             this.dgvProductos.Name = "dgvProductos";

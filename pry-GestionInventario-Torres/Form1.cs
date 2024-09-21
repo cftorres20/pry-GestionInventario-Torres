@@ -57,6 +57,7 @@ namespace pry_GestionInventario_Torres
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
+            abrirFormularioHijo(new frmBuscarProducto());
             esconderSubMenu();
         }
 
@@ -73,6 +74,7 @@ namespace pry_GestionInventario_Torres
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             esconderSubMenu();
+            abrirFormularioHijo(new frmEliminarProducto());
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
@@ -87,7 +89,7 @@ namespace pry_GestionInventario_Torres
 
         private Form activarForm = null;
 
-        private void openChildForm(Form formularioHijo)
+        private void abrirFormularioHijo(Form formularioHijo)
         {
             if (activarForm != null)
             {
