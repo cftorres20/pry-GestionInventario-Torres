@@ -74,7 +74,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(644, 166);
+            this.groupBox2.Size = new System.Drawing.Size(644, 154);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar Producto";
@@ -82,7 +82,7 @@
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(479, 82);
+            this.cmbCategoria.Location = new System.Drawing.Point(482, 61);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(148, 21);
             this.cmbCategoria.TabIndex = 21;
@@ -122,7 +122,7 @@
             // 
             // btnBuscarProducto
             // 
-            this.btnBuscarProducto.Location = new System.Drawing.Point(500, 121);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(503, 100);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
             this.btnBuscarProducto.Size = new System.Drawing.Size(127, 33);
             this.btnBuscarProducto.TabIndex = 15;
@@ -131,14 +131,14 @@
             // 
             // txtBuscarNombre
             // 
-            this.txtBuscarNombre.Location = new System.Drawing.Point(87, 84);
+            this.txtBuscarNombre.Location = new System.Drawing.Point(90, 63);
             this.txtBuscarNombre.Name = "txtBuscarNombre";
             this.txtBuscarNombre.Size = new System.Drawing.Size(146, 20);
             this.txtBuscarNombre.TabIndex = 15;
             // 
             // txtBuscarCodigo
             // 
-            this.txtBuscarCodigo.Location = new System.Drawing.Point(314, 84);
+            this.txtBuscarCodigo.Location = new System.Drawing.Point(317, 63);
             this.txtBuscarCodigo.Name = "txtBuscarCodigo";
             this.txtBuscarCodigo.Size = new System.Drawing.Size(71, 20);
             this.txtBuscarCodigo.TabIndex = 17;
@@ -146,7 +146,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(397, 87);
+            this.label9.Location = new System.Drawing.Point(400, 66);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 13);
             this.label9.TabIndex = 15;
@@ -155,7 +155,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(241, 87);
+            this.label8.Location = new System.Drawing.Point(244, 66);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 15;
@@ -164,7 +164,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 87);
+            this.label7.Location = new System.Drawing.Point(15, 66);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 10;
@@ -176,7 +176,7 @@
             this.dgvProductos.AllowUserToDeleteRows = false;
             this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(12, 193);
+            this.dgvProductos.Location = new System.Drawing.Point(12, 172);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersVisible = false;
@@ -199,9 +199,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 350);
+            this.groupBox1.Location = new System.Drawing.Point(12, 330);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(644, 167);
+            this.groupBox1.Size = new System.Drawing.Size(644, 187);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Eliminar Producto";
@@ -209,7 +209,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 121);
+            this.label6.Location = new System.Drawing.Point(11, 114);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 23;
@@ -217,7 +217,7 @@
             // 
             // txtStockEliminar
             // 
-            this.txtStockEliminar.Location = new System.Drawing.Point(283, 74);
+            this.txtStockEliminar.Location = new System.Drawing.Point(280, 67);
             this.txtStockEliminar.Name = "txtStockEliminar";
             this.txtStockEliminar.Size = new System.Drawing.Size(71, 20);
             this.txtStockEliminar.TabIndex = 22;
@@ -225,7 +225,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(237, 77);
+            this.label5.Location = new System.Drawing.Point(234, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 21;
@@ -233,7 +233,7 @@
             // 
             // txtCategoriaEliminar
             // 
-            this.txtCategoriaEliminar.Location = new System.Drawing.Point(78, 74);
+            this.txtCategoriaEliminar.Location = new System.Drawing.Point(75, 67);
             this.txtCategoriaEliminar.Name = "txtCategoriaEliminar";
             this.txtCategoriaEliminar.Size = new System.Drawing.Size(132, 20);
             this.txtCategoriaEliminar.TabIndex = 20;
@@ -241,7 +241,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 77);
+            this.label4.Location = new System.Drawing.Point(11, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 19;
@@ -249,14 +249,14 @@
             // 
             // txtPrecioEliminar
             // 
-            this.txtPrecioEliminar.Location = new System.Drawing.Point(443, 34);
+            this.txtPrecioEliminar.Location = new System.Drawing.Point(440, 27);
             this.txtPrecioEliminar.Name = "txtPrecioEliminar";
             this.txtPrecioEliminar.Size = new System.Drawing.Size(71, 20);
             this.txtPrecioEliminar.TabIndex = 18;
             // 
             // btnEliminarProducto
             // 
-            this.btnEliminarProducto.Location = new System.Drawing.Point(500, 121);
+            this.btnEliminarProducto.Location = new System.Drawing.Point(503, 140);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.Size = new System.Drawing.Size(127, 33);
             this.btnEliminarProducto.TabIndex = 15;
@@ -265,14 +265,14 @@
             // 
             // txtNombreEliminar
             // 
-            this.txtNombreEliminar.Location = new System.Drawing.Point(222, 34);
+            this.txtNombreEliminar.Location = new System.Drawing.Point(219, 27);
             this.txtNombreEliminar.Name = "txtNombreEliminar";
             this.txtNombreEliminar.Size = new System.Drawing.Size(146, 20);
             this.txtNombreEliminar.TabIndex = 15;
             // 
             // txtCodigoEliminar
             // 
-            this.txtCodigoEliminar.Location = new System.Drawing.Point(66, 34);
+            this.txtCodigoEliminar.Location = new System.Drawing.Point(63, 27);
             this.txtCodigoEliminar.Name = "txtCodigoEliminar";
             this.txtCodigoEliminar.Size = new System.Drawing.Size(71, 20);
             this.txtCodigoEliminar.TabIndex = 17;
@@ -280,7 +280,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(397, 37);
+            this.label1.Location = new System.Drawing.Point(394, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 15;
@@ -289,7 +289,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 37);
+            this.label2.Location = new System.Drawing.Point(11, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 15;
@@ -298,7 +298,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(163, 37);
+            this.label3.Location = new System.Drawing.Point(160, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 10;
@@ -307,9 +307,9 @@
             // richDescripcionEliminar
             // 
             this.richDescripcionEliminar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richDescripcionEliminar.Location = new System.Drawing.Point(80, 121);
+            this.richDescripcionEliminar.Location = new System.Drawing.Point(77, 114);
             this.richDescripcionEliminar.Name = "richDescripcionEliminar";
-            this.richDescripcionEliminar.Size = new System.Drawing.Size(377, 39);
+            this.richDescripcionEliminar.Size = new System.Drawing.Size(377, 59);
             this.richDescripcionEliminar.TabIndex = 24;
             this.richDescripcionEliminar.Text = "";
             // 

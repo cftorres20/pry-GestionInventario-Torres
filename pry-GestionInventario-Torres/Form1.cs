@@ -64,11 +64,14 @@ namespace pry_GestionInventario_Torres
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             esconderSubMenu();
+            abrirFormularioHijo(new frmAgregarProducto());
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             esconderSubMenu();
+            abrirFormularioHijo(new frmModificarProducto());
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
