@@ -30,30 +30,31 @@
         {
             this.panelMenuLateral = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnProducto = new System.Windows.Forms.Button();
+            this.panelSubProducto = new System.Windows.Forms.Panel();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.panelSubReporte = new System.Windows.Forms.Panel();
+            this.btnGenerarReporte = new System.Windows.Forms.Button();
+            this.btnControlStock = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.panelHijo = new System.Windows.Forms.Panel();
             this.panelMenuLateral.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelSubProducto.SuspendLayout();
+            this.panelSubReporte.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenuLateral
             // 
             this.panelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.panelMenuLateral.Controls.Add(this.button7);
-            this.panelMenuLateral.Controls.Add(this.panel2);
-            this.panelMenuLateral.Controls.Add(this.button6);
-            this.panelMenuLateral.Controls.Add(this.panel1);
-            this.panelMenuLateral.Controls.Add(this.button1);
+            this.panelMenuLateral.Controls.Add(this.btnSalir);
+            this.panelMenuLateral.Controls.Add(this.panelSubReporte);
+            this.panelMenuLateral.Controls.Add(this.btnReportes);
+            this.panelMenuLateral.Controls.Add(this.panelSubProducto);
+            this.panelMenuLateral.Controls.Add(this.btnProducto);
             this.panelMenuLateral.Controls.Add(this.panelLogo);
             this.panelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
@@ -69,186 +70,201 @@
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             // 
-            // button1
+            // btnProducto
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(0, 100);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(250, 45);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Producto";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnProducto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProducto.FlatAppearance.BorderSize = 0;
+            this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnProducto.Location = new System.Drawing.Point(0, 100);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnProducto.Size = new System.Drawing.Size(250, 45);
+            this.btnProducto.TabIndex = 1;
+            this.btnProducto.Text = "Producto";
+            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
-            // panel1
+            // panelSubProducto
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 145);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 165);
-            this.panel1.TabIndex = 2;
+            this.panelSubProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelSubProducto.Controls.Add(this.btnEliminar);
+            this.panelSubProducto.Controls.Add(this.btnModificar);
+            this.panelSubProducto.Controls.Add(this.btnAgregar);
+            this.panelSubProducto.Controls.Add(this.btnBuscarProducto);
+            this.panelSubProducto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubProducto.Location = new System.Drawing.Point(0, 145);
+            this.panelSubProducto.Name = "panelSubProducto";
+            this.panelSubProducto.Size = new System.Drawing.Size(250, 165);
+            this.panelSubProducto.TabIndex = 2;
             // 
-            // button2
+            // btnBuscarProducto
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(250, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Buscar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBuscarProducto.FlatAppearance.BorderSize = 0;
+            this.btnBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarProducto.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarProducto.Location = new System.Drawing.Point(0, 0);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnBuscarProducto.Size = new System.Drawing.Size(250, 40);
+            this.btnBuscarProducto.TabIndex = 0;
+            this.btnBuscarProducto.Text = "Buscar";
+            this.btnBuscarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
-            // button3
+            // btnAgregar
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 40);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(250, 40);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Agregar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(0, 40);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAgregar.Size = new System.Drawing.Size(250, 40);
+            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // button4
+            // btnModificar
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 80);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(250, 40);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Modificar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnModificar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(0, 80);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnModificar.Size = new System.Drawing.Size(250, 40);
+            this.btnModificar.TabIndex = 2;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // button5
+            // btnEliminar
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 120);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(250, 40);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Eliminar";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(0, 120);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnEliminar.Size = new System.Drawing.Size(250, 40);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // button6
+            // btnReportes
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(0, 310);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(250, 45);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Reportes";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReportes.Location = new System.Drawing.Point(0, 310);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportes.Size = new System.Drawing.Size(250, 45);
+            this.btnReportes.TabIndex = 3;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
-            // panel2
+            // panelSubReporte
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 355);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 82);
-            this.panel2.TabIndex = 4;
+            this.panelSubReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelSubReporte.Controls.Add(this.btnGenerarReporte);
+            this.panelSubReporte.Controls.Add(this.btnControlStock);
+            this.panelSubReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubReporte.Location = new System.Drawing.Point(0, 355);
+            this.panelSubReporte.Name = "panelSubReporte";
+            this.panelSubReporte.Size = new System.Drawing.Size(250, 82);
+            this.panelSubReporte.TabIndex = 4;
             // 
-            // button9
+            // btnGenerarReporte
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 40);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(250, 40);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Generar Reporte";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnGenerarReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGenerarReporte.FlatAppearance.BorderSize = 0;
+            this.btnGenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarReporte.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarReporte.Location = new System.Drawing.Point(0, 40);
+            this.btnGenerarReporte.Name = "btnGenerarReporte";
+            this.btnGenerarReporte.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnGenerarReporte.Size = new System.Drawing.Size(250, 40);
+            this.btnGenerarReporte.TabIndex = 1;
+            this.btnGenerarReporte.Text = "Generar Reporte";
+            this.btnGenerarReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarReporte.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnControlStock
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 0);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(250, 40);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "Control Stock";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnControlStock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnControlStock.FlatAppearance.BorderSize = 0;
+            this.btnControlStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnControlStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnControlStock.ForeColor = System.Drawing.Color.White;
+            this.btnControlStock.Location = new System.Drawing.Point(0, 0);
+            this.btnControlStock.Name = "btnControlStock";
+            this.btnControlStock.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnControlStock.Size = new System.Drawing.Size(250, 40);
+            this.btnControlStock.TabIndex = 0;
+            this.btnControlStock.Text = "Control Stock";
+            this.btnControlStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnControlStock.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnSalir
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(0, 516);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(250, 45);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Salir";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSalir.Location = new System.Drawing.Point(0, 516);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSalir.Size = new System.Drawing.Size(250, 45);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // panelHijo
+            // 
+            this.panelHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panelHijo.Location = new System.Drawing.Point(256, 0);
+            this.panelHijo.Name = "panelHijo";
+            this.panelHijo.Size = new System.Drawing.Size(200, 100);
+            this.panelHijo.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 561);
+            this.Controls.Add(this.panelHijo);
             this.Controls.Add(this.panelMenuLateral);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Inventario";
             this.panelMenuLateral.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.panelSubProducto.ResumeLayout(false);
+            this.panelSubReporte.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -257,17 +273,18 @@
 
         private System.Windows.Forms.Panel panelMenuLateral;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Panel panelSubProducto;
+        private System.Windows.Forms.Button btnBuscarProducto;
+        private System.Windows.Forms.Button btnProducto;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Panel panelSubReporte;
+        private System.Windows.Forms.Button btnGenerarReporte;
+        private System.Windows.Forms.Button btnControlStock;
+        private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel panelHijo;
     }
 }
 
