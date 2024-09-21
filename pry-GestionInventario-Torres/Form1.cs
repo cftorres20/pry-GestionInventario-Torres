@@ -88,6 +88,7 @@ namespace pry_GestionInventario_Torres
         private void btnSalir_Click(object sender, EventArgs e)
         {
             esconderSubMenu();
+            this.Close();   
         }
 
         private Form activarForm = null;
