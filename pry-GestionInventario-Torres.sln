@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pry-GestionInventario-Torres", "pry-GestionInventario-Torres\pry-GestionInventario-Torres.csproj", "{634FF4FF-AC4B-41E0-8C8E-F6A92268DE79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{634FF4FF-AC4B-41E0-8C8E-F6A92268DE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634FF4FF-AC4B-41E0-8C8E-F6A92268DE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634FF4FF-AC4B-41E0-8C8E-F6A92268DE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634FF4FF-AC4B-41E0-8C8E-F6A92268DE79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AFBE7B9-DB55-43F2-B73D-6D259AFAEA7A}
+	EndGlobalSection
+EndGlobal
