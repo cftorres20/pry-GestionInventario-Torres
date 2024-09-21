@@ -79,5 +79,30 @@ namespace pry_GestionInventario_Torres
         {
             mostrarSubMenu(panelSubReporte);
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+        }
+
+        private Form activarForm = null;
+
+        private void openChildForm(Form formularioHijo)
+        {
+            if (activarForm != null)
+            {
+                activarForm.Close(); //Cerramos el formulario activo y abrimos el otro 
+            }
+
+            activarForm = formularioHijo;
+            formularioHijo.TopLevel = false;
+            formularioHijo.FormBorderStyle = FormBorderStyle.None;
+            formularioHijo.Dock = DockStyle.Fill;
+            panelHijo.Controls.Add(formularioHijo);
+            panelHijo.Tag = formularioHijo;
+            formularioHijo.BringToFront();
+            formularioHijo.Show();
+        }
+                
     }
 }
