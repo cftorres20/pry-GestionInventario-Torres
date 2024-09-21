@@ -247,9 +247,10 @@
             // panelHijo
             // 
             this.panelHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.panelHijo.Location = new System.Drawing.Point(256, 0);
+            this.panelHijo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelHijo.Location = new System.Drawing.Point(250, 0);
             this.panelHijo.Name = "panelHijo";
-            this.panelHijo.Size = new System.Drawing.Size(200, 100);
+            this.panelHijo.Size = new System.Drawing.Size(684, 561);
             this.panelHijo.TabIndex = 1;
             // 
             // Form1
@@ -259,6 +260,7 @@
             this.ClientSize = new System.Drawing.Size(934, 561);
             this.Controls.Add(this.panelHijo);
             this.Controls.Add(this.panelMenuLateral);
+            this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Inventario";

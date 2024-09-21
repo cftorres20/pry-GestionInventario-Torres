@@ -16,6 +16,7 @@ namespace pry_GestionInventario_Torres
         public Form1()
         {
             InitializeComponent();
+            personalizarDiseno();
         }
 
         private void personalizarDiseno()
@@ -56,22 +57,22 @@ namespace pry_GestionInventario_Torres
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
-
+            esconderSubMenu();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            esconderSubMenu();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            esconderSubMenu();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            esconderSubMenu();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
