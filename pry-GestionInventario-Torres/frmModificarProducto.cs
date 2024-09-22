@@ -14,7 +14,8 @@ namespace pry_GestionInventario_Torres
     {
         public frmModificarProducto()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
-    }
+        
+    }    
 }
