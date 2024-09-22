@@ -18,7 +18,7 @@ namespace pry_GestionInventario_Torres
             InitializeComponent();
         }
 
-        List<string> encabezado = new List<string>() { "Id", "Nombre", "Descripcion", "Precio", "Stock" };
+        List<string> encabezado = new List<string>() { "Id", "Nombre", "Descripcion", "Precio", "Stock", "Categorias" };
 
         private void frmBuscarProducto_Load(object sender, EventArgs e)
         {
@@ -49,7 +49,7 @@ namespace pry_GestionInventario_Torres
             }
             else if (optBuscarCategoria.Checked && cmbCategoria.SelectedItem != null)
             {
-
+                buscaPorCategoria(buscarCategoria);
             }
         }
 
@@ -103,6 +103,32 @@ namespace pry_GestionInventario_Torres
             }
         }
 
+        private void buscaPorCategoria(string categoria)
+        {
+            DBConexion db = new DBConexion();
+            List<Dictionary<string, object>> listaProductos = db.obtenerDatos();
+
+            var productoEncontrado = listaProductos.Where(p => p["Categorias"].ToString().Equals(categoria, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            if (productoEncontrado.Any())
+            {
+                dgvProductos.Rows.Clear();
+                foreach (var item in productoEncontrado)
+                {
+                    dgvProductos.Rows.Add(item["Id"],
+                        item["Nombre"],
+                        item["Descripcion"],
+                        item["Precio"],
+                        item["Stock"],
+                        item["Categorias"]);
+                }
+            }
+            else
+            {
+                MessageBox.Show($"El producto categoría {categoria} no se encuentra en el inventario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         #region REGION Validar Radio button
         private void optBuscarNombre_CheckedChanged(object sender, EventArgs e)
         {
@@ -117,6 +143,7 @@ namespace pry_GestionInventario_Torres
         private void optBuscarCategoria_CheckedChanged(object sender, EventArgs e)
         {
             cmbCategoria.Enabled = optBuscarCategoria.Checked;
+            cargarCombo();
         }
 
         private void chequear(RadioButton opt, TextBox text)
@@ -144,11 +171,35 @@ namespace pry_GestionInventario_Torres
         }
         #endregion
 
+        private void cargarCombo()
+        {
+            cmbCategoria.Items.Clear();
+            DBConexion db = new DBConexion();
+            List<Dictionary<string, object>> listaProductos = db.obtenerDatos();
+
+            HashSet<string> categoriasUnicas = new HashSet<string>();
+
+            foreach (var producto in listaProductos)
+            {
+                if (producto.ContainsKey("Categorias"))
+                {
+                    categoriasUnicas.Add(producto["Categorias"].ToString());
+                }
+            }
+
+            foreach (var categoria in categoriasUnicas)
+            {
+                cmbCategoria.Items.Add(categoria);
+            }
+
+        }
+
         private void limpiarCombo()
         {
             txtBuscarNombre.Clear();
             txtBuscarCodigo.Clear();
-            cmbCategoria.SelectedIndex = -1;
+            cmbCategoria.SelectedIndex = -1; 
+
         }
     }
 }
