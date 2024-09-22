@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.optBuscarCategoria = new System.Windows.Forms.RadioButton();
+            this.optBuscarCodigo = new System.Windows.Forms.RadioButton();
+            this.optBuscarNombre = new System.Windows.Forms.RadioButton();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.txtBuscarNombre = new System.Windows.Forms.TextBox();
             this.txtBuscarCodigo = new System.Windows.Forms.TextBox();
@@ -36,10 +40,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -47,10 +47,10 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.cmbCategoria);
+            this.groupBox2.Controls.Add(this.optBuscarCategoria);
+            this.groupBox2.Controls.Add(this.optBuscarCodigo);
+            this.groupBox2.Controls.Add(this.optBuscarNombre);
             this.groupBox2.Controls.Add(this.btnBuscarProducto);
             this.groupBox2.Controls.Add(this.txtBuscarNombre);
             this.groupBox2.Controls.Add(this.txtBuscarCodigo);
@@ -64,6 +64,50 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar Producto";
             // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(479, 82);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(148, 24);
+            this.cmbCategoria.TabIndex = 21;
+            // 
+            // optBuscarCategoria
+            // 
+            this.optBuscarCategoria.AutoSize = true;
+            this.optBuscarCategoria.Location = new System.Drawing.Point(319, 30);
+            this.optBuscarCategoria.Name = "optBuscarCategoria";
+            this.optBuscarCategoria.Size = new System.Drawing.Size(159, 20);
+            this.optBuscarCategoria.TabIndex = 20;
+            this.optBuscarCategoria.TabStop = true;
+            this.optBuscarCategoria.Text = "Buscar por Categorías";
+            this.optBuscarCategoria.UseVisualStyleBackColor = true;
+            this.optBuscarCategoria.CheckedChanged += new System.EventHandler(this.optBuscarCategoria_CheckedChanged);
+            // 
+            // optBuscarCodigo
+            // 
+            this.optBuscarCodigo.AutoSize = true;
+            this.optBuscarCodigo.Location = new System.Drawing.Point(166, 30);
+            this.optBuscarCodigo.Name = "optBuscarCodigo";
+            this.optBuscarCodigo.Size = new System.Drawing.Size(137, 20);
+            this.optBuscarCodigo.TabIndex = 19;
+            this.optBuscarCodigo.TabStop = true;
+            this.optBuscarCodigo.Text = "Buscar por Código";
+            this.optBuscarCodigo.UseVisualStyleBackColor = true;
+            this.optBuscarCodigo.CheckedChanged += new System.EventHandler(this.optBuscarCodigo_CheckedChanged);
+            // 
+            // optBuscarNombre
+            // 
+            this.optBuscarNombre.AutoSize = true;
+            this.optBuscarNombre.Location = new System.Drawing.Point(14, 30);
+            this.optBuscarNombre.Name = "optBuscarNombre";
+            this.optBuscarNombre.Size = new System.Drawing.Size(142, 20);
+            this.optBuscarNombre.TabIndex = 18;
+            this.optBuscarNombre.TabStop = true;
+            this.optBuscarNombre.Text = "Buscar por Nombre";
+            this.optBuscarNombre.UseVisualStyleBackColor = true;
+            this.optBuscarNombre.CheckedChanged += new System.EventHandler(this.optBuscarNombre_CheckedChanged);
+            // 
             // btnBuscarProducto
             // 
             this.btnBuscarProducto.Location = new System.Drawing.Point(537, 121);
@@ -72,6 +116,7 @@
             this.btnBuscarProducto.TabIndex = 15;
             this.btnBuscarProducto.Text = "Buscar 🔎";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // txtBuscarNombre
             // 
@@ -128,47 +173,6 @@
             this.dgvProductos.Size = new System.Drawing.Size(645, 247);
             this.dgvProductos.TabIndex = 4;
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(14, 30);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(142, 20);
-            this.radioButton1.TabIndex = 18;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Buscar por Nombre";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(166, 30);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(137, 20);
-            this.radioButton2.TabIndex = 19;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Buscar por Código";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(319, 30);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(159, 20);
-            this.radioButton3.TabIndex = 20;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Buscar por Categorías";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(479, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 24);
-            this.comboBox1.TabIndex = 21;
-            // 
             // frmBuscarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -178,10 +182,11 @@
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmBuscarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Producto";
+            this.Load += new System.EventHandler(this.frmBuscarProducto_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
@@ -199,9 +204,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton optBuscarCategoria;
+        private System.Windows.Forms.RadioButton optBuscarCodigo;
+        private System.Windows.Forms.RadioButton optBuscarNombre;
+        private System.Windows.Forms.ComboBox cmbCategoria;
     }
 }
