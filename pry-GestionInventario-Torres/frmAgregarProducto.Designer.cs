@@ -29,40 +29,42 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.richDescripcion = new System.Windows.Forms.RichTextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.nudAgregarStock = new System.Windows.Forms.NumericUpDown();
+            this.txtAgregarCategoria = new System.Windows.Forms.TextBox();
+            this.txtAgregarPrecio = new System.Windows.Forms.TextBox();
+            this.txtAgregarCodigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAgregarNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAgregarStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.btnAgregarProducto);
             this.groupBox1.Controls.Add(this.richDescripcion);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.nudAgregarStock);
+            this.groupBox1.Controls.Add(this.txtAgregarCategoria);
+            this.groupBox1.Controls.Add(this.txtAgregarPrecio);
+            this.groupBox1.Controls.Add(this.txtAgregarCodigo);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtAgregarNombre);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(21, 21);
             this.groupBox1.Name = "groupBox1";
@@ -70,15 +72,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // button1
+            // btnAgregarProducto
             // 
-            this.button1.Location = new System.Drawing.Point(447, 214);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 38);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Agregar Producto";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(447, 214);
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(133, 38);
+            this.btnAgregarProducto.TabIndex = 11;
+            this.btnAgregarProducto.Text = "Agregar Producto";
+            this.btnAgregarProducto.UseVisualStyleBackColor = true;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // richDescripcion
             // 
@@ -88,33 +90,33 @@
             this.richDescripcion.TabIndex = 10;
             this.richDescripcion.Text = "";
             // 
-            // numericUpDown1
+            // nudAgregarStock
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(485, 117);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(95, 21);
-            this.numericUpDown1.TabIndex = 9;
+            this.nudAgregarStock.Location = new System.Drawing.Point(485, 117);
+            this.nudAgregarStock.Name = "nudAgregarStock";
+            this.nudAgregarStock.Size = new System.Drawing.Size(95, 21);
+            this.nudAgregarStock.TabIndex = 9;
             // 
-            // textBox9
+            // txtAgregarCategoria
             // 
-            this.textBox9.Location = new System.Drawing.Point(173, 74);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(169, 21);
-            this.textBox9.TabIndex = 8;
+            this.txtAgregarCategoria.Location = new System.Drawing.Point(173, 74);
+            this.txtAgregarCategoria.Name = "txtAgregarCategoria";
+            this.txtAgregarCategoria.Size = new System.Drawing.Size(169, 21);
+            this.txtAgregarCategoria.TabIndex = 8;
             // 
-            // textBox8
+            // txtAgregarPrecio
             // 
-            this.textBox8.Location = new System.Drawing.Point(485, 74);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(95, 21);
-            this.textBox8.TabIndex = 7;
+            this.txtAgregarPrecio.Location = new System.Drawing.Point(500, 74);
+            this.txtAgregarPrecio.Name = "txtAgregarPrecio";
+            this.txtAgregarPrecio.Size = new System.Drawing.Size(80, 21);
+            this.txtAgregarPrecio.TabIndex = 7;
             // 
-            // textBox7
+            // txtAgregarCodigo
             // 
-            this.textBox7.Location = new System.Drawing.Point(485, 26);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(95, 21);
-            this.textBox7.TabIndex = 6;
+            this.txtAgregarCodigo.Location = new System.Drawing.Point(485, 26);
+            this.txtAgregarCodigo.Name = "txtAgregarCodigo";
+            this.txtAgregarCodigo.Size = new System.Drawing.Size(95, 21);
+            this.txtAgregarCodigo.TabIndex = 6;
             // 
             // label4
             // 
@@ -161,12 +163,12 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Nombre de Producto:";
             // 
-            // textBox1
+            // txtAgregarNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 21);
-            this.textBox1.TabIndex = 1;
+            this.txtAgregarNombre.Location = new System.Drawing.Point(173, 26);
+            this.txtAgregarNombre.Name = "txtAgregarNombre";
+            this.txtAgregarNombre.Size = new System.Drawing.Size(169, 21);
+            this.txtAgregarNombre.TabIndex = 1;
             // 
             // label1
             // 
@@ -186,6 +188,15 @@
             this.dgvProductos.Size = new System.Drawing.Size(619, 172);
             this.dgvProductos.TabIndex = 1;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(480, 77);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(14, 15);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "$";
+            // 
             // frmAgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -201,7 +212,7 @@
             this.Text = "Agregar Producto";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAgregarStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
 
@@ -216,13 +227,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtAgregarNombre;
+        private System.Windows.Forms.TextBox txtAgregarCategoria;
+        private System.Windows.Forms.TextBox txtAgregarPrecio;
+        private System.Windows.Forms.TextBox txtAgregarCodigo;
+        private System.Windows.Forms.Button btnAgregarProducto;
         private System.Windows.Forms.RichTextBox richDescripcion;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudAgregarStock;
         private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.Label label7;
     }
 }

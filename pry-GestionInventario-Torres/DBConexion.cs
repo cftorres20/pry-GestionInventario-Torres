@@ -215,10 +215,7 @@ namespace pry_GestionInventario_Torres
                     {
                         MessageBox.Show("No se encontró un producto con el ID proporcionado.");
                     }
-
                 }
-
-
             }
             catch (Exception ex)
             {
