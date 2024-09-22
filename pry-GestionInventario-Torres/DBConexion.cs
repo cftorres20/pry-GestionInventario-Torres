@@ -114,7 +114,121 @@ namespace pry_GestionInventario_Torres
 
         }
 
+        public void modificarProducto(string id, string nombre = null, string descripcion = null, string precio = null, string stock = null, string categorias = null)
+        {
+            try
+            {
+                abrirConexion();
 
+                //Lista para almacenar las partes del UPDATE
+                List<string> update = new List<string>();
+
+                //Lista para almacenar los parametros 
+                List<string> parametros = new List<string>();
+
+                if (!string.IsNullOrEmpty(nombre))
+                {
+                    update.Add("Nombre = ?");
+                    parametros.Add(nombre);
+                }
+                if (!string.IsNullOrEmpty(descripcion))
+                {
+                    update.Add("Descripcion = ?");
+                    parametros.Add(descripcion);
+                }
+                if (!string.IsNullOrEmpty(precio))
+                {
+                    update.Add("Precio = ?");
+                    parametros.Add(precio);
+                }
+                if (!string.IsNullOrEmpty(stock))
+                {
+                    update.Add("Stock = ?");
+                    parametros.Add(stock);
+                }
+                if (!string.IsNullOrEmpty(categorias))
+                {
+                    update.Add("Categorias = ?");
+                    parametros.Add(categorias);
+                }
+
+                if (update.Count == 0)
+                {
+                    MessageBox.Show("No se especificaron campos para actualizar.");
+                    return;
+                }
+
+                //Construir la consulta SQL 
+                string query = $"UPDATE Productos SET {string.Join(", ", update)} WHERE Id = ?";
+
+                using (OleDbCommand comando = new OleDbCommand(query, conexion))
+                {
+                    foreach (var parametro in parametros)
+                    {
+                        comando.Parameters.AddWithValue("?", parametro);
+                    }
+
+                    //Agregar el parametro del ID al final
+                    comando.Parameters.AddWithValue("?", id);
+
+                    int filas = comando.ExecuteNonQuery();
+
+                    if (filas > 0)
+                    {
+                        MessageBox.Show($"El producto con código {id} ha sido modificado con éxito.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró un producto con el ID proporcionado.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al modificar el producto: {ex.Message}");
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+
+        }
+
+        public void eliminarProducto(int id)
+        {
+            try
+            {
+                abrirConexion();
+                string query = "DELETE FROM Productos WHERE Id = ?";
+
+                using (OleDbCommand comando = new OleDbCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("?", id);
+
+                    int filas = comando.ExecuteNonQuery();
+
+                    if (filas > 0)
+                    {
+                        MessageBox.Show($"El producto código {id} ha sido eliminado con éxito.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró un producto con el ID proporcionado.");
+                    }
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al eliminar el producto: {ex.Message}");
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
 
     }
 }
