@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbModificarCategoria = new System.Windows.Forms.ComboBox();
             this.richDescripcionModificar = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtStockModificar = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtCategoriaModificar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -62,7 +62,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.groupBox1.Controls.Add(this.cmbModificarCategoria);
+            this.groupBox1.Controls.Add(this.txtCategoriaModificar);
             this.groupBox1.Controls.Add(this.richDescripcionModificar);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtStockModificar);
@@ -81,14 +81,6 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modificar Producto";
-            // 
-            // cmbModificarCategoria
-            // 
-            this.cmbModificarCategoria.FormattingEnabled = true;
-            this.cmbModificarCategoria.Location = new System.Drawing.Point(74, 61);
-            this.cmbModificarCategoria.Name = "cmbModificarCategoria";
-            this.cmbModificarCategoria.Size = new System.Drawing.Size(148, 21);
-            this.cmbModificarCategoria.TabIndex = 25;
             // 
             // richDescripcionModificar
             // 
@@ -148,6 +140,7 @@
             this.btnModificarProducto.TabIndex = 15;
             this.btnModificarProducto.Text = "Modificar Producto";
             this.btnModificarProducto.UseVisualStyleBackColor = true;
+            this.btnModificarProducto.Click += new System.EventHandler(this.btnModificarProducto_Click);
             // 
             // txtNombreModificar
             // 
@@ -203,6 +196,7 @@
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.Size = new System.Drawing.Size(645, 141);
             this.dgvProductos.TabIndex = 8;
+            this.dgvProductos.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProductos_CellMouseDoubleClick);
             // 
             // groupBox2
             // 
@@ -242,6 +236,7 @@
             this.optBuscarCategoria.TabStop = true;
             this.optBuscarCategoria.Text = "Buscar por Categorías";
             this.optBuscarCategoria.UseVisualStyleBackColor = true;
+            this.optBuscarCategoria.CheckedChanged += new System.EventHandler(this.optBuscarCategoria_CheckedChanged);
             // 
             // optBuscarCodigo
             // 
@@ -253,6 +248,7 @@
             this.optBuscarCodigo.TabStop = true;
             this.optBuscarCodigo.Text = "Buscar por Código";
             this.optBuscarCodigo.UseVisualStyleBackColor = true;
+            this.optBuscarCodigo.CheckedChanged += new System.EventHandler(this.optBuscarCodigo_CheckedChanged);
             // 
             // optBuscarNombre
             // 
@@ -264,6 +260,7 @@
             this.optBuscarNombre.TabStop = true;
             this.optBuscarNombre.Text = "Buscar por Nombre";
             this.optBuscarNombre.UseVisualStyleBackColor = true;
+            this.optBuscarNombre.CheckedChanged += new System.EventHandler(this.optBuscarNombre_CheckedChanged);
             // 
             // btnBuscarProducto
             // 
@@ -273,6 +270,7 @@
             this.btnBuscarProducto.TabIndex = 15;
             this.btnBuscarProducto.Text = "Buscar 🔎";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // txtBuscarNombre
             // 
@@ -315,6 +313,13 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Nombre:";
             // 
+            // txtCategoriaModificar
+            // 
+            this.txtCategoriaModificar.Location = new System.Drawing.Point(74, 61);
+            this.txtCategoriaModificar.Name = "txtCategoriaModificar";
+            this.txtCategoriaModificar.Size = new System.Drawing.Size(132, 20);
+            this.txtCategoriaModificar.TabIndex = 25;
+            // 
             // frmModificarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +332,7 @@
             this.Name = "frmModificarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Producto";
+            this.Load += new System.EventHandler(this.frmModificarProducto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
@@ -339,7 +345,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cmbModificarCategoria;
         private System.Windows.Forms.RichTextBox richDescripcionModificar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtStockModificar;
@@ -364,5 +369,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtCategoriaModificar;
     }
 }
