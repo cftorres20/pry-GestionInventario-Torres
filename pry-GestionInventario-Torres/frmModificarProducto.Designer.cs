@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCategoriaModificar = new System.Windows.Forms.TextBox();
             this.richDescripcionModificar = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtStockModificar = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtCategoriaModificar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -81,6 +81,13 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modificar Producto";
+            // 
+            // txtCategoriaModificar
+            // 
+            this.txtCategoriaModificar.Location = new System.Drawing.Point(74, 61);
+            this.txtCategoriaModificar.Name = "txtCategoriaModificar";
+            this.txtCategoriaModificar.Size = new System.Drawing.Size(132, 20);
+            this.txtCategoriaModificar.TabIndex = 25;
             // 
             // richDescripcionModificar
             // 
@@ -313,18 +320,11 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Nombre:";
             // 
-            // txtCategoriaModificar
-            // 
-            this.txtCategoriaModificar.Location = new System.Drawing.Point(74, 61);
-            this.txtCategoriaModificar.Name = "txtCategoriaModificar";
-            this.txtCategoriaModificar.Size = new System.Drawing.Size(132, 20);
-            this.txtCategoriaModificar.TabIndex = 25;
-            // 
             // frmModificarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(668, 522);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvProductos);
