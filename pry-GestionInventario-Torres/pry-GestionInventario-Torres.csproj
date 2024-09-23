@@ -118,6 +118,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReporteInventario.resx">
       <DependentUpon>ReporteInventario.cs</DependentUpon>
@@ -137,6 +138,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BDD\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\sub1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

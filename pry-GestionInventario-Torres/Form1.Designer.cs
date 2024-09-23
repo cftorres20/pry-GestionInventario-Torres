@@ -42,9 +42,15 @@
             this.btnControlStock = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panelHijo = new System.Windows.Forms.Panel();
+            this.pctInicio = new System.Windows.Forms.PictureBox();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.panelMenuLateral.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.panelSubProducto.SuspendLayout();
             this.panelSubReporte.SuspendLayout();
+            this.panelHijo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctInicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuLateral
@@ -64,6 +70,7 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.pctLogo);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -250,11 +257,34 @@
             // panelHijo
             // 
             this.panelHijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panelHijo.Controls.Add(this.pctInicio);
             this.panelHijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHijo.Location = new System.Drawing.Point(250, 0);
             this.panelHijo.Name = "panelHijo";
             this.panelHijo.Size = new System.Drawing.Size(684, 561);
             this.panelHijo.TabIndex = 1;
+            // 
+            // pctInicio
+            // 
+            this.pctInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctInicio.Image = global::pry_GestionInventario_Torres.Properties.Resources.sub1;
+            this.pctInicio.Location = new System.Drawing.Point(217, 0);
+            this.pctInicio.Name = "pctInicio";
+            this.pctInicio.Size = new System.Drawing.Size(467, 561);
+            this.pctInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctInicio.TabIndex = 0;
+            this.pctInicio.TabStop = false;
+            // 
+            // pctLogo
+            // 
+            this.pctLogo.Image = global::pry_GestionInventario_Torres.Properties.Resources.logo;
+            this.pctLogo.Location = new System.Drawing.Point(0, 3);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(244, 97);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctLogo.TabIndex = 0;
+            this.pctLogo.TabStop = false;
             // 
             // Form1
             // 
@@ -268,8 +298,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Inventario";
             this.panelMenuLateral.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
             this.panelSubProducto.ResumeLayout(false);
             this.panelSubReporte.ResumeLayout(false);
+            this.panelHijo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctInicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,6 +324,8 @@
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panelHijo;
+        private System.Windows.Forms.PictureBox pctLogo;
+        private System.Windows.Forms.PictureBox pctInicio;
     }
 }
 
