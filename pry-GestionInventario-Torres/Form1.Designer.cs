@@ -211,6 +211,7 @@
             this.btnGenerarReporte.Text = "Generar Reporte";
             this.btnGenerarReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerarReporte.UseVisualStyleBackColor = true;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
             // 
             // btnControlStock
             // 
@@ -227,6 +228,7 @@
             this.btnControlStock.Text = "Control Stock";
             this.btnControlStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnControlStock.UseVisualStyleBackColor = true;
+            this.btnControlStock.Click += new System.EventHandler(this.btnControlStock_Click);
             // 
             // btnSalir
             // 

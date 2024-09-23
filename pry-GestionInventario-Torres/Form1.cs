@@ -85,6 +85,17 @@ namespace pry_GestionInventario_Torres
             mostrarSubMenu(panelSubReporte);
         }
 
+        private void btnControlStock_Click(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+        }
+
+        private void btnGenerarReporte_Click(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirFormularioHijo(new ReporteInventario());
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             esconderSubMenu();
@@ -109,6 +120,7 @@ namespace pry_GestionInventario_Torres
             formularioHijo.BringToFront();
             formularioHijo.Show();
         }
-                
+
+        
     }
 }
