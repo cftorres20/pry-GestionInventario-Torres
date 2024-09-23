@@ -88,6 +88,7 @@ namespace pry_GestionInventario_Torres
         private void btnControlStock_Click(object sender, EventArgs e)
         {
             esconderSubMenu();
+            abrirFormularioHijo(new frmControlStock());
         }
 
         private void btnGenerarReporte_Click(object sender, EventArgs e)
