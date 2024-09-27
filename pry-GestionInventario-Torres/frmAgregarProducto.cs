@@ -19,6 +19,16 @@ namespace pry_GestionInventario_Torres
             InitializeComponent();
         }
 
+        List<string> encabezado = new List<string>() { "Id", "Nombre", "Descripcion", "Precio", "Stock", "Categorias" };
+
+        private void frmAgregarProducto_Load(object sender, EventArgs e)
+        {
+            foreach (var c in encabezado)
+            {
+                dgvProductos.Columns.Add($"col{c}", c.ToString());
+            }
+        }
+
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
             string agregarId = txtAgregarCodigo.Text;
@@ -39,7 +49,29 @@ namespace pry_GestionInventario_Torres
 
             MessageBox.Show("Producto agregado con éxito a la base de datos.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            cargarGrilla();
+
             limpiarCombo();
+        }
+
+        private void cargarGrilla()
+        {
+            DBConexion db = new DBConexion();
+            List<Dictionary<string, object>> listaProductos = db.obtenerDatos();
+            dgvProductos.Rows.Clear();
+
+            foreach (var productos in listaProductos)
+            {
+                dgvProductos.Rows.Add(
+                productos["Id"].ToString(),
+                productos["Nombre"].ToString(),
+                productos["Descripcion"].ToString(),
+                productos["Precio"].ToString(),
+                productos["Stock"].ToString(),
+                productos["Categorias"].ToString()
+                );
+
+            }
         }
 
         private void limpiarCombo()
@@ -52,5 +84,6 @@ namespace pry_GestionInventario_Torres
             nudAgregarStock.Value = 0;
             txtAgregarCategoria.Clear();
         }
+        
     }
 }

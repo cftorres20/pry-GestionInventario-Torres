@@ -70,6 +70,9 @@ namespace pry_GestionInventario_Torres
             DBConexion db = new DBConexion();
             db.modificarProducto(modificarId, modificarNombre, modificarDescripcion, modificarPrecio, modificarStock, modificarCategoria);
 
+            limpiarCombo();
+            limpiarComboModificar();
+
         }
 
         #region metodos de Busquedas
@@ -261,6 +264,17 @@ namespace pry_GestionInventario_Torres
 
             // Capitaliza la primera letra y mantiene el resto en minúsculas
             return char.ToUpper(input[0]) + input.Substring(1).ToLower();
+        }
+
+        private void limpiarComboModificar()
+        {
+            txtCategoriaModificar.Clear();
+            txtCodigoModificar.Clear();
+            txtNombreModificar.Clear();
+            richDescripcionModificar.Clear();
+            txtPrecioModificar.Clear();
+            txtStockModificar.Clear();   
+            dgvProductos.Rows.Clear();
         }
 
     }    

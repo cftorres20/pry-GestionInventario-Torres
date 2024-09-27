@@ -244,6 +244,7 @@ namespace pry_GestionInventario_Torres
             txtBuscarNombre.Clear();
             txtBuscarCodigo.Clear();
             cmbCategoria.SelectedIndex = -1;
+            richDescripcionEliminar.Clear();
         }
 
         private void limpiarComboEliminar()
